@@ -1,139 +1,140 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+
 body {
   background-color: #000000;
   color: #ffffff;
   font-family: 'Raleway', sans-serif;
 }
 
-.header {
-  &__wrapper {
-    background-color: #608736;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 10px;
-    border-bottom: 1px solid black;
-  }
-  &__timer {
-    background-color: #ffffff;
-    color: #000000;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-    width: 150px;
-    height: 60px;
-  }
-  &__logo {
-    width: 100px;
-    margin: 5px 0;
-  }
-  &__login-button {
-    background-color: #ff6600;
-    color: #ffffff;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #608736;
-    width: 150px;
-    height: 60px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  &__login-button:hover {
+.header__wrapper {
+  background-color: #608736;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  border-bottom: 1px solid black;
+}
+
+.header__timer {
+  background-color: #ffffff;
+  color: #000000;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  width: 150px;
+  height: 60px;
+}
+
+.header__logo {
+  width: 100px;
+  margin: 5px 0;
+}
+
+.header__login-button {
+  background-color: #ff6600;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #608736;
+  width: 150px;
+  height: 60px;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
     background-color: lighten(#ff6600, 10);
     transition: 0.3s;
   }
 }
 
-.main-content {
-  &__add-button-wrapper {
-    background-color: #333333;
-    background-image: url("../img/back-under-header-dev.png");
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 0;
-    .add-button-wrapper__button {
-      width: 250px;
-      height: 60px;
-      cursor: pointer;
-      background-color: #000000;
-      color: #ffffff;
-      border: 1px solid #000000;
-      position: relative;
-      transition: 0.3s;
-      span {
-        height: 54px;
-        line-height: 54px;
-        font-size: 20px;
-        margin: 0 10px;
-        display: block;
-        border-left: 1px solid #ffffff;
-        border-right: 1px solid #ffffff;
-      }
-    }
-    .add-button-wrapper__button:hover{
+.content__add-button-wrapper {
+  background-color: #333333;
+  background-image: url("../img/back-under-header-dev.png");
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  .add-button-wrapper__button {
+    width: 250px;
+    height: 60px;
+    cursor: pointer;
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #000000;
+    position: relative;
+    transition: 0.3s;
+    &:hover {
       background-color: lighten(#000000, 20);
       transition: 0.3s;
     }
+    span {
+      height: 54px;
+      line-height: 54px;
+      font-size: 20px;
+      margin: 0 10px;
+      display: block;
+      border-left: 1px solid #ffffff;
+      border-right: 1px solid #ffffff;
+    }
   }
-  &__pizzas-orders {
+}
+
+.content__pizzas-orders {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: stretch;
+  .pizzas-orders__pizza-card {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
-    align-content: stretch;
-    .pizzas-orders__pizza-card {
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    margin: 10px 0;
+    .pizza-card__ordered-details {
+      width: 100%;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: space-around;
       align-items: center;
-      width: 300px;
-      height: 300px;
-      border: 1px solid black;
-      margin: 10px 0;
-      .pizza-card__ordered-details {
+      flex-wrap: wrap;
+      align-content: stretch;
+      .timer {
         width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-        align-content: stretch;
-        .timer {
-          width: 100%;
-          text-align: left;
-          padding-bottom: 5px;
-        }
-        .number {
-          width: 100%;
-          text-align: right;
-          padding-bottom: 5px;
-        }
-        .time-to-finish {
-          width: 100%;
-          text-align: left;
-        }
-        .cost {
-          width: 100%;
-          text-align: right;
-        }
+        text-align: left;
+        padding-bottom: 5px;
       }
-      .pizza-card__img {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        & img {
-          margin-top: 20px;
-          width: 100%;
-        }
+      .number {
+        width: 100%;
+        text-align: right;
+        padding-bottom: 5px;
+      }
+      .time-to-finish {
+        width: 100%;
+        text-align: left;
+      }
+      .cost {
+        width: 100%;
+        text-align: right;
+      }
+    }
+    .pizza-card__img {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      & img {
+        margin-top: 20px;
+        width: 100%;
       }
     }
   }
@@ -153,43 +154,41 @@ body {
 }
 
 @media (max-width: 500px) {
-  .header {
-    &__wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 30px 10px;
-      border-bottom: 1px solid black;
-    }
-    &__timer {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      border: 1px solid black;
-      width: 80%;
-      height: 60px;
-    }
-    &__logo {
-      width: 100px;
-    }
-    &__login {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-    }
-    &__login-button {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      border: 1px solid black;
-      width: 80%;
-      height: 60px;
-      cursor: pointer;
-    }
+  .header__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10px;
+    border-bottom: 1px solid black;
+  }
+  .header__timer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 80%;
+    height: 60px;
+  }
+  .header__logo {
+    width: 100px;
+  }
+  .header__login {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__login-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 80%;
+    height: 60px;
+    cursor: pointer;
   }
 }
