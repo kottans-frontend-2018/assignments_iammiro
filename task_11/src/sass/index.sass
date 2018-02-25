@@ -1,0 +1,830 @@
+@import "colors"
+@import "fonts"
+
+////common styles///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+body
+  font-family: 'Proxima Nova', Georgia, sans-serif
+  color: $text-normal
+
+////common styles///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//header styles/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.header
+  background-color: $main-background
+  height: 200px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  &__wrapper
+    width: 1000px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+  &__logo
+    width: 100px
+    & img
+      width: 90px
+  &__button-go-back
+    width: 142px
+    height: 45px
+    border: 1px solid $light-border
+    border-radius: 5px
+    background-color: $button-regular
+    font-size: 10px
+    font-weight: bold
+    color: gray
+    cursor: pointer
+    transition: 0.3s
+  &__button-go-back:hover
+    background-color: darken($button-regular, 3)
+    transition: 0.3s
+  &__button-sign-in
+    width: 142px
+    height: 45px
+    border: 1px solid $light-border
+    border-radius: 5px
+    background-color: $button-regular
+    font-size: 10px
+    font-weight: bold
+    color: gray
+    cursor: pointer
+    transition: 0.3s
+  &__button-sign-in:hover
+    background-color: darken($button-regular, 3)
+    transition: 0.3s
+
+//header styles/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//main content//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.main-content
+  width: 100%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background-color: $main-background
+  &__form-wrapper
+    margin-bottom: 100px
+    background-color: $white
+    max-width: 1000px
+    border: 1px solid $light-border
+    border-radius: 4px
+  &__form
+    counter-reset: section
+
+////main content////////////////////////////////////////////////////////////////////////////////////////////////////////
+.main-content
+
+  &__order-summary-block
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: flex-start
+    border-bottom: 1px solid $light-border
+  &__order-summary-table
+    width: 50%
+    padding: 20px 0px 0px 30px
+  & caption
+    text-align: left
+    padding: 0px 0px 25px 0px
+    text-transform: uppercase
+    font-size: 12px
+    font-weight: bold
+  & th
+    padding: 0px 0px 10px 45px
+    text-align: left
+    text-transform: uppercase
+    font-size: 11px
+  & td
+    padding: 0px 0px 0px 45px
+    text-align: left
+    font-size: 11px
+  & img
+    width: 20px
+    height: 20px
+    margin-right: 10px
+  &__order-summary-buttons
+    margin: 22px 10px 0 0
+    width: 18%
+    flex-direction: column
+    justify-content: center
+    align-items: center
+  &__place-order-button
+    width: 150px
+    height: 45px
+    background-color: $button-order
+    border: 1px solid $button-order
+    border-radius: 5px
+    font-size: 11px
+    font-weight: bold
+    color: white
+    cursor: pointer
+    margin-bottom: 10px
+    text-transform: uppercase
+    transition: 0.3s
+  &__place-order-button:hover
+    background-color: lighten($button-order, 5)
+    transition: 0.3s
+  &__print-order-button
+    width: 150px
+    height: 45px
+    border: 1px solid $light-border
+    border-radius: 5px
+    background-color: $button-regular
+    font-size: 11px
+    font-weight: bold
+    color: gray
+    cursor: pointer
+    text-transform: uppercase
+    transition: 0.3s
+  &__print-order-button:hover
+    background-color: darken($button-regular, 3)
+    transition: 0.3s
+  &__help-center
+    padding-bottom: 20px
+    border-left: 1px solid $light-border
+    width: 32%
+  &__help-center a
+    color: $text-bold
+    font-weight: bold
+    font-size: 10px
+    padding: 0 0 0 55px
+  &__help-center h4
+    margin-left: 20px
+    font-size: 12px
+  &__help-center p
+    padding: 0 15px 0 55px
+    font-size: 12px
+    & img
+      width: 20px
+      height: 20px
+  &__select-type h1
+    text-transform: uppercase
+    text-align: center
+    margin: 90px 0px 65px 0px
+    font-size: 18px
+    letter-spacing: 3px
+    text-decoration: underline
+
+  &__radio-buttons-wrapper
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    & label
+      margin: 10px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      cursor: pointer
+      position: relative
+    & label > input
+      opacity: 0
+      position: absolute
+      -webkit-appearance: none
+      -moz-appearance: none
+      appearance: none
+    & label > input:checked + span
+      -webkit-box-shadow: inset 0px 0px 0px 10px $checked
+      -moz-box-shadow: inset 0px 0px 0px 10px $checked
+      box-shadow: inset 0px 0px 0px 10px $checked
+      border-radius: 5px
+      position: relative
+
+    & label > input:checked + span::after
+      content: ""
+      position: absolute
+      right: -10px
+      top: -10px
+      z-index: 1111
+      width: 31px
+      height: 31px
+      background: url(../img/icons/checked.svg) no-repeat center center
+      background-size: 31px
+  &__radio-img-wrapper
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    border: 1px solid $light-border
+    border-radius: 5px
+    width: 250px
+    height: 180px
+    position: relative
+    background-color: $button-regular
+    transition: 0.3s
+  &__radio-img-wrapper:hover
+    background-color: darken($button-regular, 3)
+    transition: 0.3s
+  &__radio-img-wrapper img
+    width: 240px
+    height: 170px
+    position: relative
+    margin: 0
+
+  &__upload-documents
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    margin: 67px 0 0 122px
+  &__upload-documents-header
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    position: relative
+  &__section-header
+    font-size: 22px
+    font-weight: 300
+  &__section-header::before
+    counter-increment: section
+    content: counter(section)
+    position: absolute
+    left: -70px
+    bottom: 10px
+    border: 1px solid $text-bold
+    width: 35px
+    height: 35px
+    border-radius: 100%
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+  & .list-of-file-types
+    margin-left: 10px
+    font-weight: 300
+    font-size: 14px
+  &__upload-documents-input
+    display: none
+  &__upload-documents-input + label
+    margin-top: 30px
+    width: 195px
+    height: 45px
+    border: 1px solid $light-border
+    border-radius: 5px
+    background-color: $button-regular
+    cursor: pointer
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    transition: 0.3s
+  &__upload-documents-input + label:hover
+    background-color: darken($button-regular, 3)
+    transition: 0.3s
+  &__uploaded-files
+    height: 120px
+    width: 775px
+    border: 1px solid $light-border
+    border-radius: 5px
+    margin: 30px 170px 30px 0
+    padding-bottom: 20px
+  &__uploaded-files-table th
+    padding: 20px 100px 0px 20px
+  &__uploaded-files-table td
+    padding: 15px 0px 0px 20px
+  &__uploaded-files-table-center-row
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    margin-top: 5px
+  &__button-delete-icon
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    border: 1px solid $white
+    border-radius: 3px
+    background-color: $white
+    padding: 5px
+    cursor: pointer
+    transition: 0.3s
+  &__button-delete-icon img
+    margin: 0
+  &__button-delete-icon:hover
+    border: 1px solid $light-border
+    background-color: $button-regular
+    transition: 0.3s
+
+  &__chose-languages
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    position: relative
+    margin: 50px 0 0 122px
+  &__chose-languages p
+    width: 40px
+    font-size: 14px
+    padding-right: 10px
+    float: left
+  &__chose-languages select
+    width: 170px
+    height: 45px
+    background-color: $button-regular
+    color: $text-bold
+    border: 1px solid $light-border
+    border-radius: 5px
+    padding: 0 0 0 50px
+    cursor: pointer
+    transition: 0.3s
+  &__chose-languages select:hover
+    background-color: darken($button-regular, 3)
+    transition: 0.3s
+  &__chose-languages-from
+    margin: 20px 0
+  &__chose-languages-to
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+
+  &__chose-languages-to-add-button
+    width: 100px
+    height: 45px
+    background-color: $button-regular
+    color: $text-bold
+    border: 1px solid $light-border
+    border-radius: 5px
+    margin-right: 15px
+    cursor: pointer
+    transition: 0.3s
+  &__chose-languages-to-add-button:hover
+    background-color: darken($button-regular, 3)
+    transition: 0.3s
+  &__chose-languages-to select
+    margin-right: 15px
+  &__chose-languages-to input
+    margin: 0 15px
+  &__chose-languages::before
+    counter-increment: section
+    content: counter(section)
+    position: absolute
+    left: -70px
+    top: 10px
+    font-weight: bold
+    font-size: 22px
+    border: 1px solid $text-bold
+    width: 35px
+    height: 35px
+    border-radius: 100%
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+
+  &__select-tone
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    margin: 80px 120px 0 122px
+    position: relative
+    width: 30%
+    float: left
+    & input
+      position: absolute
+      opacity: 0
+      position: absolute
+      -webkit-appearance: none
+      -moz-appearance: none
+    & label
+      width: 200px
+      height: 60px
+      background-color: $button-regular
+      color: $text-bold
+      border: 1px solid $light-border
+      border-radius: 5px
+      margin: 10px 0 15px 0
+      display: flex
+      flex-direction: row
+      justify-content: center
+      align-items: center
+      cursor: pointer
+      position: relative
+      transition: 0.3s
+    & label:hover
+      background-color: darken($button-regular, 3)
+      transition: 0.3s
+
+    & label > input:checked + .main-content__select-tone-img-wrapper
+      width: 200px
+      height: 60px
+      -webkit-box-shadow: inset 0px 0px 0px 5px $checked
+      -moz-box-shadow: inset 0px 0px 0px 5px $checked
+      box-shadow: inset 0px 0px 0px 5px $checked
+      border-radius: 5px
+      position: relative
+    & label > input:checked + .main-content__select-tone-img-wrapper::after
+      content: ""
+      position: absolute
+      right: -10px
+      top: -10px
+      z-index: 1111
+      width: 31px
+      height: 31px
+      background: url(../img/icons/checked.svg) no-repeat center center
+      background-size: 31px
+  &__select-tone-img-wrapper
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+  &__select-tone::before
+    counter-increment: section
+    content: counter(section)
+    position: absolute
+    left: -70px
+    top: 10px
+    font-weight: bold
+    font-size: 22px
+    border: 1px solid $text-bold
+    width: 35px
+    height: 35px
+    border-radius: 100%
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+
+  &__urgent-range
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    margin: 80px 20px 0px 0px
+    position: relative
+  &__timeline-info
+    border: 1px solid $light-border
+    border-radius: 5px
+    padding: 0 20px
+    margin-top: 20px
+  &__urgent-range-labels-wrapper
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+
+  &__urgent-range::before
+    counter-increment: section
+    content: counter(section)
+    position: absolute
+    left: -70px
+    top: 10px
+    font-weight: bold
+    font-size: 22px
+    border: 1px solid $text-bold
+    width: 35px
+    height: 35px
+    border-radius: 100%
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+
+  &__urgent-range input
+    -webkit-appearance: none
+    width: 430px
+    margin: 50px 0 20px 0
+    position: relative
+
+  &__urgent-range input::-webkit-slider-thumb
+    -webkit-appearance: none
+    width: 20px
+    height: 20px
+    border-radius: 10px
+    background: $orange
+    margin-top: -5px
+    z-index: 2
+    position: relative
+    cursor: pointer
+    transition: 0.3s
+  &__urgent-range input::-webkit-slider-thumb:hover
+    background-color: darken($orange, 3)
+    transition: 0.3s
+
+  &__urgent-range input::after
+    content: ''
+    display: block
+    width: 10px
+    height: 10px
+    border-radius: 10px
+    background: $text-bold
+    position: absolute
+    z-index: 1
+
+  &__urgent-range input:before
+    content: ''
+    display: block
+    width: 10px
+    height: 10px
+    border-radius: 5px
+    background: $text-bold
+    position: absolute
+    right: 0
+    z-index: 1
+
+  &__urgent-range input::-webkit-slider-runnable-track
+    -webkit-appearance: none
+    width: 430px
+    background: $light-border
+    height: 10px
+    border-radius: 10px
+    cursor: pointer
+  &__urgent-range-orange-input
+    color: $orange
+    font-size: 18px
+    font-weight: bold
+
+  &__choose-payment
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    margin-left: 140px
+    position: relative
+    clear: both
+  &__personal-payment-details
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+  &__choose-payment::before
+    counter-increment: section
+    content: counter(section)
+    position: absolute
+    left: -70px
+    top: 10px
+    font-weight: bold
+    font-size: 22px
+    border: 1px solid $text-bold
+    width: 35px
+    height: 35px
+    border-radius: 100%
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+
+  &__personal-payment-details-name
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+  &__personal-payment-details-address
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: flex-start
+  &__personal-payment-details-column
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    margin: 20px 30px 50px 0
+  &__personal-payment-details label
+    text-transform: uppercase
+    margin: 25px 0 10px 0
+    font-size: 12px
+    font-weight: 500
+  &__personal-payment-details input
+    border: 1px solid $light-border
+    padding-left: 15px
+    width: 250px
+    height: 35px
+    border-radius: 5px
+    transition: 0.3s
+  &__personal-payment-details input:hover
+    background-color: lighten($button-regular, 1)
+    transition: 0.3s
+
+  &__payments-types
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    & label
+      margin: 10px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      cursor: pointer
+      position: relative
+    & label > input
+      position: absolute
+      opacity: 0
+      -webkit-appearance: none
+      -moz-appearance: none
+
+    & label > input:checked + span
+      -webkit-box-shadow: inset 0px 0px 0px 5px $checked
+      -moz-box-shadow: inset 0px 0px 0px 5px $checked
+      box-shadow: inset 0px 0px 0px 5px $checked
+      border-radius: 5px
+      position: relative
+
+    & label > input:checked + span::after
+      content: ""
+      position: absolute
+      right: -10px
+      top: -10px
+      z-index: 1111
+      width: 31px
+      height: 31px
+      background: url(../img/icons/checked.svg) no-repeat center center
+      background-size: 31px
+    & span
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      border: 1px solid $light-border
+      border-radius: 5px
+      width: 200px
+      height: 90px
+      position: relative
+      background-color: $button-regular
+      transition: 0.3s
+    & span:hover
+      background-color: darken($button-regular, 2)
+      transition: 0.3s
+  &__payments-types img
+    width: 80px
+    height: 22px
+    position: relative
+    margin: 0
+
+  &__credit-card-details
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    margin-top: 40px
+  &__credit-card-number
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    position: relative
+    margin-right: 15px
+    & input
+      width: 300px
+      height: 40px
+      border: 1px solid $light-border
+      border-radius: 5px
+      position: relative
+      transition: 0.3s
+    & input::after
+      content: ""
+      position: absolute
+      right: -10px
+      top: -10px
+      z-index: 1111
+      width: 31px
+      height: 31px
+      background: url(../img/icons/visa.svg) no-repeat center center
+      background-size: 31px
+    & input:hover
+      background-color: darken($button-regular, 2)
+      transition: 0.3s
+
+  &__credit-card-expire-date
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    margin-right: 15px
+    & input
+      width: 120px
+      height: 40px
+      padding-left: 30px
+      border: 1px solid $light-border
+      border-radius: 5px
+      position: relative
+      text-align: center
+      color: $text-normal
+      font-size: 12px
+    & input:hover
+      background-color: darken($button-regular, 2)
+      transition: 0.3s
+  &__credit-card-cvv-code
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    margin-right: 15px
+    & input
+      width: 100px
+      height: 40px
+      border: 1px solid $light-border
+      border-radius: 5px
+      position: relative
+      text-align: center
+      color: $text-normal
+      font-size: 12px
+    & input:hover
+      background-color: darken($button-regular, 2)
+      transition: 0.3s
+
+  &__submit
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    align-items: center
+    padding: 40px
+
+  &__submit .main-content__place-order-button
+    margin: 0 20px 0 0
+
+  &__submit label
+    margin-right: 20px
+
+//footer////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.footer
+  background-color: $footer-background
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  height: 250px
+  color: $footer-text
+
+  &__wrapper
+    width: 1150px
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: flex-start
+
+  &__about-us
+    width: 25%
+
+    & img
+      width: 20px
+      height: 20px
+      margin-right: 15px
+    & p
+      font-size: 14px
+      padding: 0 35px
+  &__address
+    width: 25%
+    & img
+      width: 20px
+      height: 20px
+      margin-right: 15px
+    & address
+      padding-left: 35px
+      font-style: normal
+      line-height: 25px
+    & address a
+      font-weight: bold
+      color: $footer-text
+  &__socials
+    width: 25%
+    font-weight: bold
+    & img
+      width: 20px
+      height: 20px
+      margin-right: 15px
+      transition: 0.3s
+      &:hover
+        transform: scale(1.1, 1.1)
+        transition: 0.3s
+    & a
+      font-weight: bold
+      text-decoration: none
+      color: $footer-text
+  &__facebook
+    margin: 5px 30px
+    transition: 0.3s
+    & a:hover
+      color: lighten($footer-text, 10)
+      transition: 0.3s
+
+  &__twitter
+    margin: 5px 30px
+    transition: 0.3s
+    & a:hover
+      color: lighten($footer-text, 10)
+      transition: 0.3s
+  &__linkedin
+    margin: 5px 30px
+    transition: 0.3s
+    & a:hover
+      color: lighten($footer-text, 10)
+      transition: 0.3s
+  &__logo
+    width: 25%
+    margin-top: 50px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    & img
+      width: 80px
+
+////footer//////////////////////////////////////////////////////////////////////////////////////////////////////////////

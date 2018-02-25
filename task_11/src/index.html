@@ -1,0 +1,300 @@
+<!doctype html>
+<html>
+<head>
+    <title>TASK 11, HTML5 Form</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="header__wrapper">
+        <button class="header__button-go-back" type="button">&#8592;&#8192;GO BACK</button>
+        <div class="header__logo">
+            <a href="/"><img src="img/logo-header.png" alt="logo image"></a>
+        </div>
+        <button class="header__button-sign-in" type="button">SIGN IN</button>
+    </div>
+</header>
+<main class="main-content">
+    <div class="main-content__form-wrapper">
+        <form class="main-content__form">
+
+            <section class="main-content__order-summary-block">
+                <div class="main-content__order-summary-table">
+                    <table>
+                        <caption><img src="img/icons/check-list.svg">Your order</caption>
+                        <tr>
+                            <th>Items</th>
+                            <th>Details</th>
+                            <th>Price</th>
+                            <th>Delivery</th>
+                        </tr>
+                        <tr>
+                            <td>2 documents</td>
+                            <td>2 languages</td>
+                            <td value="$696.06">$696.06</td>
+                            <td>48 hours*</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="main-content__order-summary-buttons">
+                    <button class="main-content__place-order-button" type="submit">Place order</button>
+                    <button class="main-content__print-order-button" type="button">Print a quote</button>
+                </div>
+                <div class="main-content__help-center">
+                    <h4><img src="img/icons/life-preserver.svg">Help center</h4>
+                    <p>
+                        If you need assistance while placing your order, contact one of our beloved Project Manager by
+                        phone
+                        or email.
+                    </p>
+                    <a href="tel:+971(0) 555 555">+971(0)555 555</a>
+                    <a href="mailto:help@qtest.com">help@qtest.com</a>
+                </div>
+            </section>
+
+            <section class="main-content__select-type">
+                <h1>Select what you want to translate</h1>
+                <div class="main-content__radio-buttons-wrapper">
+                    <label for="website-radio-button">
+                        <input type="radio" id="website-radio-button" name="type" class="custom-radio-button-input" required>
+                        <span class="main-content__radio-img-wrapper">
+                            <img src="img/website.png">
+                        </span>
+                    </label>
+
+                    <label for="document-radio-button">
+                        <input type="radio" id="document-radio-button" name="type" class="custom-radio-button-input" required>
+                        <span class="main-content__radio-img-wrapper">
+                            <img src="img/documents.png">
+                        </span>
+                    </label>
+
+                    <label for="social-account-radio-button">
+                        <input type="radio" id="social-account-radio-button" name="type" class="custom-radio-button-input" required>
+                        <span class="main-content__radio-img-wrapper">
+                            <img src="img/social-account.png">
+                        </span>
+                    </label>
+                </div>
+            </section>
+
+            <section class="main-content__upload-documents">
+                <div class="main-content__upload-documents-header">
+                    <h2 class="main-content__section-header">Upload your documents<span class="list-of-file-types">(Doc, Docx, Text, PDF, Markdown)</span>
+                    </h2>
+                </div>
+                <input type="file" id="upload-documents" class="main-content__upload-documents-input">
+                <label for="upload-documents">
+                    <img src="img/icons/upload.svg">
+                    Upload a new file
+                </label>
+                <div class="main-content__uploaded-files">
+                    <table class="main-content__uploaded-files-table">
+                        <tr>
+                            <th>File name</th>
+                            <th>File size</th>
+                            <th>Number of words</th>
+                            <th>Remove</th>
+                        </tr>
+                        <tr>
+                            <td class="main-content__uploaded-files-table-center-row"><img src="img/icons/interface.svg">
+                                <span class="main-content__uploaded-files-table-center-text">business_operations.docx</span>
+                            </td>
+                            <td>78kb</td>
+                            <td>842</td>
+                            <td>
+                                <button type="button" class="main-content__button-delete-icon"><img
+                                        src="img/icons/delete.svg"/></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="main-content__uploaded-files-table-center-row"><img src="img/icons/interface.svg">
+                                <span class="main-content__uploaded-files-table-center-text">business_financial.docx</span>
+                            </td>
+                            <td>26kb</td>
+                            <td>2,326</td>
+                            <td>
+                                <button type="button" class="main-content__button-delete-icon"><img
+                                        src="img/icons/delete.svg"/></button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+            <section class="main-content__chose-languages">
+                <h2>Chose your languages pairings</h2>
+                <div class="main-content__chose-languages-input-wrapper">
+                    <div class="main-content__chose-languages-from">
+                        <p>
+                            From
+                        </p>
+                        <select id="lang-input-from" title="from">
+                            <option>English</option>
+                        </select>
+                    </div>
+                    <div class="main-content__chose-languages-to">
+                        <p>
+                            To
+                        </p>
+                        <select id="lang-input-to-1" title="to">
+                            <option>Arabic</option>
+                        </select>
+                        <label for="lang-input-to-2">
+                        </label>
+                        <select id="lang-input-to-2">
+                            <option>Kurdish</option>
+                        </select>
+                        <button type="button" class="main-content__button-delete-icon"><img src="img/icons/delete.svg">
+                        </button>
+                        <input type="button" value="+ ADD" class="main-content__chose-languages-to-add-button">
+                    </div>
+                </div>
+            </section>
+
+            <section class="main-content__select-tone">
+                <h2>Select your desired tone</h2>
+                <label for="friendly-tone">
+                    <input type="radio" id="friendly-tone" name="website-radio-button" required>
+                    <span class="main-content__select-tone-img-wrapper">
+                        <img src="img/icons/communication.svg">
+                        Friendly / Casual
+                    </span>
+                </label>
+                <label for="pro-tone">
+                    <input type="radio" id="pro-tone" name="website-radio-button" required>
+                    <span class="main-content__select-tone-img-wrapper">
+                    <img src="img/icons/suitcase.svg">
+                        <span>Corporate / Pro</span>
+                    </span>
+                </label>
+                <label for="media-tone">
+                    <input type="radio" id="media-tone" name="website-radio-button" required>
+                    <span class="main-content__select-tone-img-wrapper">
+                        <img src="img/icons/sound.svg">
+                        <span>Media / Formal</span>
+                    </span>
+                </label>
+            </section>
+
+            <section class="main-content__urgent-range">
+                <h2>Tell us how urgent this job is</h2>
+                <input type="range" id="urgent-range">
+                <div class="main-content__urgent-range-labels-wrapper">
+                    <label for="urgent-range">I got time</label>
+                    <label for="urgent-range" class="main-content__urgent-range-orange-input">Average</label>
+                    <label for="urgent-range">Yesterday</label>
+                </div>
+                <div class="main-content__timeline-info">
+                    <h3><img src="img/icons/info.svg">Timeline info</h3>
+                    <p>with an <span>Average</span> timeline set up, our expert translator can take a reasonable amount
+                        of time perfecing your translation</p>
+                </div>
+            </section>
+
+            <section class="main-content__choose-payment">
+                <h2>Sign up and choose a payment method</h2>
+                <div class="main-content__account-sign-in">
+                    Already have an account with us?
+                    <a href="/">Sign in.</a>
+                </div>
+                <div class="main-content__personal-payment-details">
+                    <div class="main-content__personal-payment-details-name">
+                        <label for="name">Full name</label>
+                        <input type="text" id="name" placeholder="Full name" required>
+                    </div>
+                    <div class="main-content__personal-payment-details-address">
+                        <div class="main-content__personal-payment-details-column">
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" placeholder="example@test.com" required>
+                        </div>
+                        <div class="main-content__personal-payment-details-column">
+                            <label for="password">Chose a password</label>
+                            <input type="text" id="password" placeholder="*********" required minlength="8">
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content__payments-types">
+                    <label for="credit-card">
+                        <input type="radio" id="credit-card" name="payment" required>
+                        <span><img src="img/visa.png"/></span>
+                    </label>
+
+                    <label for="pay-pal">
+                        <input type="radio" id="pay-pal" name="payment" required>
+                        <span><img src="img/paypal.png"/></span>
+                    </label>
+
+                    <label for="amazon">
+                        <input type="radio" id="amazon" name="payment" required>
+                        <span><img src="img/amazon.png"/></span>
+                    </label>
+                </div>
+                <div class="main-content__credit-card-details">
+                    <div class="main-content__credit-card-number">
+                        <label for="card-number">Credit card</label>
+                        <input type="text" id="card-number" required>
+                    </div>
+                    <div class="main-content__credit-card-expire-date">
+                        <label for="expire-date">Expire date</label>
+                        <input type="date" id="expire-date" required>
+                    </div>
+                    <div class="main-content__credit-card-cvv-code">
+                        <label for="cvv-code">Code</label>
+                        <input type="text" id="cvv-code" required>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main-content__submit">
+                <label for="agree-checkbox">
+                    <input type="checkbox" id="agree-checkbox" checked>
+                    I agree to the
+                    <a href="/">Terms & Conditions</a>
+                </label>
+                <button class="main-content__place-order-button" type="submit">Place order</button>
+                <button class="main-content__print-order-button" type="button">Print a quote</button>
+            </section>
+
+        </form>
+    </div>
+</main>
+<footer class="footer">
+    <div class="footer__wrapper">
+        <div class="footer__about-us">
+            <h4><img src="img/icons/heart.svg">What we do</h4>
+            <p>
+                We provide a full range of language services including content development, document, website and social
+                media account translations.
+            </p>
+        </div>
+        <div class="footer__address">
+            <h4><img src="img/icons/location.svg">Our main office</h4>
+            <address>
+                Dubai, UAE<br>
+                P.O. Box: 502735<br>
+                Phone: <a href="tel:+971(0)44278128">+971(0)44278128</a>
+            </address>
+        </div>
+        <div class="footer__socials">
+            <h4><img src="img/icons/social.svg">Connect with us</h4>
+            <div class="footer__facebook">
+                <a href="/"><img src="img/icons/facebook.svg">Facebook</a>
+            </div>
+            <div class="footer__twitter">
+                <a href="/"><img src="img/icons/twitter.svg">Twitter</a>
+            </div>
+            <div class="footer__linkedin">
+                <a href="/"><img src="img/icons/linkedin.svg">Linkedin</a>
+            </div>
+        </div>
+        <div class="footer__logo">
+            <a href="/"><img src="img/logo-footer.png"></a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
